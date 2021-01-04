@@ -1,3 +1,5 @@
+<img align="right" src="https://user-images.githubusercontent.com/27065646/53551960-ae4dff80-3b3a-11e9-9075-cef786c69364.png"/>
+
 # Sherlock API
 
 Api for sherlock, Nothing yet, [look here](https://github.com/sherlock-project/api/issues/1)
@@ -7,8 +9,9 @@ Api for sherlock, Nothing yet, [look here](https://github.com/sherlock-project/a
 This REST API is built on top of [Django REST Framework](https://www.django-rest-framework.org/)
 
 
-```
-pip install djangorestframework
+```sh
+# install the requirements
+$ python3 -m pip install -r requirements.txt
 ```
 
 ## License
