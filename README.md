@@ -1,4 +1,4 @@
-# API
+# Sherlock API
 
 Api for sherlock, Nothing yet, [look here](https://github.com/sherlock-project/api/issues/1)
 
@@ -8,6 +8,7 @@ This REST API is built on top of [Django REST Framework](https://www.django-rest
 
 
 ```
+pip install djangorestframework
 ```
 
 ## License
