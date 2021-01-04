@@ -13,10 +13,30 @@ This REST API is built on top of [Django REST Framework](https://www.django-rest
 (known as DRF). You would need at least the very basic knowledge about DRF in
 order to do development to this project.
 
+### Installation
+
 ```sh
+# clone the repo
+$ git clone https://github.com/sherlock-project/api.git
+
+# change the working directory to api
+$ cd api
+
 # install the requirements
 $ python3 -m pip install -r requirements.txt
 ```
+
+*P.S. Please use `python` instead of `python3` if you are on Windows system*
+
+### Run API Server
+
+```sh
+# in the root of project diretory..
+$ python3 manage.py runserver
+```
+
+Start you browser and type [127.0.0.1:8000](127.0.0.1:8000) in as
+your target URL and hit return.
 
 ## License
 
