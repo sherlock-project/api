@@ -31,6 +31,9 @@ $ python3 -m pip install -r requirements.txt
 ### Run API Server
 
 ```sh
+# propagate modules
+$ python3 manage.py migrate
+
 # in the root of project diretory..
 $ python3 manage.py runserver
 ```
