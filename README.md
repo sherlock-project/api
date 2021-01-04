@@ -5,7 +5,7 @@
 [![Python Ver.](https://img.shields.io/badge/python-%3E=_3.6-green.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Api for sherlock, Nothing yet, [look here](https://github.com/sherlock-project/api/issues/1)
+About Api for sherlock module
 
 ## Prerequisites
 
