@@ -38,6 +38,8 @@ $ python3 manage.py runserver
 Start you browser and type [127.0.0.1:8000](http://127.0.0.1:8000/) in as
 your target URL and hit return.
 
+Now you should able to test your Sherlock API through DRF browser interface!
+
 ## License
 
 MIT © Sherlock Project
