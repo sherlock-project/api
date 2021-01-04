@@ -2,7 +2,7 @@
 
 # Sherlock API
 
-[![Python Ver.](https://img.shields.io/badge/python-%3E=_3.6-green.svg)](https://www.python.org/downloads/)
+[![Python Ver.](https://img.shields.io/badge/python-%3E=_3.5-green.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Api for sherlock module.
