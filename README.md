@@ -10,7 +10,7 @@ Api for sherlock module.
 ## Prerequisites
 
 This REST API is built on top of [Django REST Framework](https://www.django-rest-framework.org/)
-known as DRF. You would need at least the very basic knowledge about DRF in
+(known as DRF). You would need at least the very basic knowledge about DRF in
 order to do development to this project.
 
 ```sh
