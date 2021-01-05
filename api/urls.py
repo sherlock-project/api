@@ -19,10 +19,6 @@ from django.urls import include, path
 from rest_framework import routers
 from cli import views
 
-router = routers.DefaultRouter()
-router.register(r'cli', views.UserViewSet)
-
 urlpatterns = [
-    path('', include(router.urls)),
-    path('test/', views.MyOwnView.as_view()),
+    path('cli/', views.CliView.as_view()),
 ]
