@@ -15,8 +15,6 @@ import json
 class CliView(APIView):
     """Pass in command directly to sherlock."""
     def post(self, request):
-        """POST request method.
-        """
         data = json.loads(request.body)
         print(data['args'])
         full_cmd = f"{py_command()} {sherlock_dir()}/sherlock {data['args']}"
