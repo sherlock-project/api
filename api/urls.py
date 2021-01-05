@@ -24,4 +24,5 @@ router.register(r'cli', views.UserViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('test/', views.MyOwnView.as_view()),
 ]
