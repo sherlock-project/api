@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 
 from helper import *
 import json
+from django.http import HttpResponse, JsonResponse
 
 class CliView(APIView):
     """Pass in command directly to sherlock."""
