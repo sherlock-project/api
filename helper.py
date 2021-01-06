@@ -1,14 +1,11 @@
 """Helper and Utility module.
 """
 import os
+import json
 
 def py_command():
     """Return valid Python executable command base on current OS."""
     return "python" if os.name == 'nt' else "python3"
-
-def sherlock_dir():
-    """Return sherlock project root directory."""
-    return "./execution/sherlock"
 
 def cmd_in_dir(newdir, cmd):
     """Preserve current working directory and execute command
@@ -25,3 +22,16 @@ def cmd_in_dir(newdir, cmd):
         os.system(cmd)
     finally:
         os.chdir(prevdir)
+
+# Sherlock Related
+
+def sherlock_dir():
+    """Return sherlock project root directory."""
+    return "./execution/sherlock"
+
+def sherlock_data():
+    """Return `data.json` file from sherlock project."""
+    data_path = f"{sherlock_dir()}/sherlock/resources/data.json"
+    with open(data_path, "r", encoding="utf-8") as data_file:
+        data = json.load(data_file)
+    return data
