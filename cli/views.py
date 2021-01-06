@@ -1,11 +1,6 @@
 import os
 from subprocess import *
 
-from django.shortcuts import render
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
-from rest_framework import permissions
-
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -23,3 +18,8 @@ class CliView(APIView):
         outs, errs = proc.communicate()
         output = outs if outs else errs
         return Response({'output': output})
+
+class DataView(APIView):
+    """Request JSON data from sherlock resources."""
+    def get(self, request):
+        return Response(sherlock_data())
