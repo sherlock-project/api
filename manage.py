@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
+from os import path
 import sys
 
 from helper import *
@@ -8,8 +9,10 @@ from helper import *
 def init_sherlock():
     """Get the newest Sherlock project."""
     print("[INFO] Prepare for Sherlock Project..")
-    os.system(f"git clone https://github.com/sherlock-project/sherlock {sherlock_dir()}");
-    cmd_in_dir(sherlock_dir(), f"git pull")  # Update to the newest version
+    if path.exists(sherlock_dir()):
+        cmd_in_dir(sherlock_dir(), f"git pull")  # Update to the newest version
+    else:  # Othersie, clone it once
+        os.system(f"git clone https://github.com/sherlock-project/sherlock {sherlock_dir()}");
     os.system(f"{py_command()} -m pip install -r {sherlock_dir()}/requirements.txt")
     os.system(f"{py_command()} {sherlock_dir()}/sherlock --version")
 
