@@ -20,4 +20,5 @@ from cli import views
 
 urlpatterns = [
     path('cli/', views.CliView.as_view()),
+    path('data/', views.DataView.as_view()),
 ]
