@@ -35,7 +35,7 @@ $ python3 -m pip install -r requirements.txt
 $ python3 manage.py migrate
 
 # in the root of project diretory..
-$ python3 manage.py runserver
+$ python3 manage.py runserver 0.0.0.0:8000
 ```
 
 Start you browser and type [127.0.0.1:8000](http://127.0.0.1:8000/) in as
