@@ -23,6 +23,17 @@ def cmd_in_dir(newdir, cmd):
     finally:
         os.chdir(prevdir)
 
+# Security
+
+def valid_args(cmd):
+    """Return true, if command is safe to execute."""
+    escape = [";", "&", "|", "<", ">" "\"" "\'"]
+    for ch in escape:
+        if ch in cmd:
+            return False
+    return True
+
+
 # Sherlock Related
 
 def sherlock_dir():
