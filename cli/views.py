@@ -14,10 +14,14 @@ class CliView(APIView):
         data = json.loads(request.body)
         args = data['args']
 
-        full_cmd = f"{py_command()} {sherlock_dir()}/sherlock {args}"
-        proc = Popen(full_cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
-        outs, errs = proc.communicate()
-        output = outs if outs else errs
+        if valid_args(args) == False:
+            output = "Invalid argument string"
+        else:
+            full_cmd = f"{py_command()} {sherlock_dir()}/sherlock {args}"
+            proc = Popen(full_cmd, stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
+            outs, errs = proc.communicate()
+            output = outs if outs else errs
+
         return Response({'output': output})
 
 class DataView(APIView):
